@@ -5,16 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda | Productos</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <script>
+        function incrementarCantidad(index) {
+            var cantidadInput = document.getElementById("cantidad" + index);
+            var cantidad = parseInt(cantidadInput.value);
+            cantidadInput.value = cantidad + 1;
+        }
+
+        function decrementarCantidad(index) {
+            var cantidadInput = document.getElementById("cantidad" + index);
+            var cantidad = parseInt(cantidadInput.value);
+            if (cantidad > 0) {
+                cantidadInput.value = cantidad - 1;
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="wrapper">
-        <h1 class="titulo">¨Productos</h1>
-        <div class="card"> <img src="/source/candela.jpg" alt="candela" class="card-image" ></div>
-        <div class="card"><img src="/source/images.jpg" alt="tenis nike"class="card-image"></div>
-        <div class="card"><img src="/source/kaws(1).jpg" alt="figura"class="card-image"></div>
-        <div class="card"><img src="/source/supreme.jpg" alt="patineta"class="card-image"></div>
-        <div class="card"><img src="/source/new.jpg" alt="gorra"class="card-image"></div>
-        <div class="card"><img src="/source/gorra.jpg" alt="gorra"class="card-image"></div>
-    </div>
-</body>
-</html>
+        <h1 class="titulo">Productos</h1>
+        <div class="card">
+            <img src="/source/candela.jpg" alt="candela" class="card-image" onclick="incrementarCantidad(0)">
+            <div class="cantidad">
+                <button onclick="decrementarCantidad(0)">-</button>
+                <input id="cantidad0" type="text" value="0" readonly>
+                <button onclick="incrementarCantidad(0)">+</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/source/images.jpg" alt="tenis nike" class="card-image" onclick="incrementarCantidad(1)">
+            <div class="cantidad">
+                <button onclick="decrementarCantidad(1)">-</button>
+                <input id="cantidad1" type="text" value="0" readonly>
+                <button onclick="incrementarCantidad(1)">+</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/source/kaws(1).jpg" alt="figura" class="card-image" onclick="incrementarCantidad(2)">
+            <div class="cantidad">
+                <button onclick="decrementarCantidad(2)">-</button>
+                <input id="cantidad2" type="text" value="0" readonly>
+                <button onclick="incrementarCantidad(2)">+</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/source/supreme.jpg" alt="patineta" class="card-image" onclick="incrementarCantidad(3)">
+            <div class="cantidad">
+                <button onclick="decrementarCantidad(3)">-</button>
+                <input id="cantidad3" type="text" value="0" readonly>
+                <button onclick="incrementarCantidad(3)">+</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/source/new.jpg" alt="gorra" class="card-image" onclick="incrementarCantidad(4)">
+            <div class="cantidad">
+                <button onclick="decrementarCantidad(4)">-</button>
+                <input id="cantidad4" type="text" value="0" readonly>
+                <button onclick="incrementarCantidad(4)">+</button>
+            </div>
